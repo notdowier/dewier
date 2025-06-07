@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not Dewier - Bio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: black url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDF6bW82MW5hZms5Y2ZkNjJsMG16cjlqMW9uZDJuOWhyYW95ZWw4bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ES4Vcv8zWfIt2/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #ddd;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    /* Overlay to darken the gif for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.75);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    main.bio-card {
+      background: rgba(255 255 255 / 0.1);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-radius: 0.75rem;
+      padding: 4rem 3rem;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      color: #ddd;
+      user-select: none;
+    }
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      color: #a78bfa;
+      line-height: 1.1;
+      user-select: text;
+    }
+    h2.greeting {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      color: #c4b5fd;
+      user-select: text;
+    }
+    p.bio-text {
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      color: #b0aec0;
+      user-select: text;
+    }
+    nav.social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    nav.social-links a {
+      width: 56px;
+      height: 56px;
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 50%;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ddd;
+      text-decoration: none;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    nav.social-links a:hover,
+    nav.social-links a:focus {
+      background-color: rgba(167 139 250 / 0.3);
+      color: #a78bfa;
+      transform: scale(1.15);
+      outline: none;
+    }
+    nav.social-links svg {
+      width: 28px;
+      height: 28px;
+      user-select: none;
+      fill: currentColor;
+      stroke: none;
+    }
+    @media (max-width: 600px) {
+      main.bio-card {
+        padding: 3rem 2rem;
+      }
+      h1 {
+        font-size: 3.5rem;
+      }
+      h2.greeting {
+        font-size: 1.5rem;
+      }
+      nav.social-links {
+        gap: 2rem;
+      }
+      nav.social-links a {
+        width: 48px;
+        height: 48px;
+      }
+      nav.social-links svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main class="bio-card" role="main" aria-label="User biography">
+      <h1>Not Dewier</h1>
+      <h2 class="greeting">Hi, Welcome to my bio!</h2>
+      <p class="bio-text">I'm a cat lover and minecraft player!</p>
+      <nav class="social-links" aria-label="Social media links">
+        <!-- GitHub icon -->
+        <a href="https://github.com/notdowier" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub Profile">
+          <svg role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 0.297C5.372 0.297 0 5.67 0 12.297c0 5.302 3.438 9.8 8.205 11.387.6.112.82-.258.82-.577
+            0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.388-1.333-1.757-1.333-1.757-1.09-.744.082-.729.082-.729
+            1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.303-5.466-1.335-5.466-5.932
+            0-1.31.469-2.38 1.236-3.22-.124-.304-.536-1.525.117-3.176 0 0 1.008-.323 3.3 1.23a11.516 11.516 0 0 1 3.003-.404c1.018 0
+            2.045.138 3.003.404 2.291-1.553 3.296-1.23 3.296-1.23.654 1.651.242 2.872.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.628-5.475 5.922.43.372.823 1.103.823 2.222
+            0 1.607-.015 2.898-.015 3.286 0 .32.218.694.824.576C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z"/>
+          </svg>
+        </a>
+        <!-- YouTube icon -->
+        <a href="https://youtube.com/@notdowier" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel" title="YouTube Channel" style="color: #FF0000;">
+          <svg role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" stroke="none" style="width:28px; height:28px;">
+            <path d="M23.498 6.203a2.918 2.918 0 0 0-2.05-2.055C19.355 3.663 12 3.663 12 3.663s-7.355 0-9.448.486a2.918 2.918 0 0 0-2.05 2.055A30.134 30.134 0 0 0 0 12a30.13 30.13 0 0 0 .502 5.796 2.92 2.92 0 0 0 2.05 2.055c2.089.488 9.448.488 9.448.488s7.355 0 9.448-.488a2.92 2.92 0 0 0 2.05-2.055A30.13 30.13 0 0 0 24 12a30.13 30.13 0 0 0-.502-5.797z"/>
+            <path fill="#fff" d="M10 15l5-3-5-3v6z"/>
+          </svg>
+        </a>
+        <!-- Discord icon replaced with requested PNG image -->
+        <a href="https://discord.com/users/1321845978533466172" target="_blank" rel="noopener noreferrer" aria-label="Discord user profile" title="Discord Profile">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord Icon" style="width:32px; height:32px; user-select:none; pointer-events:none;" />
+        </a>
+      </nav>
+  </main>
+</body>
+</html>
